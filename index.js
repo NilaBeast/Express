@@ -1,6 +1,9 @@
 const express = require('express');
 const app =express();
 
+app.use(express.json());
+app.use(express.urlencoded({extended: true}));
+
 //Middle ware explained
 app.use((req, res, next) => {
     console.log("Middleware used and request forwaded");
